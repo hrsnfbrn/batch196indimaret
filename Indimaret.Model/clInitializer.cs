@@ -12,7 +12,7 @@ namespace Indimaret.Model
         protected override void Seed(clDataContext context)
         {
             List<clBarang> barang = new List<clBarang>();
-            barang.Add(new clBarang { TokoID = 1, KodeBarang = "KD001", NamaBarang = "Bodrex", AsalPabrik = "Jakarta", JmlBarang = 50, LamaKadaluarsa = 30 });
+            barang.Add(new clBarang { TokoID = 1, KodeBarang = "KD001", NamaBarang = "Bodrex", AsalPabrik = "Jakarta", JmlBarang = 50, Harga=3000, LamaKadaluarsa = 30 });
             base.Seed(context);
 
             foreach (var item in barang)

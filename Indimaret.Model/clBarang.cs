@@ -35,6 +35,8 @@ namespace Indimaret.Model
 
         public int JmlBarang { get; set; }
 
+        public int Harga { get; set; }
+
         public int LamaKadaluarsa { get; set; }
 
     }

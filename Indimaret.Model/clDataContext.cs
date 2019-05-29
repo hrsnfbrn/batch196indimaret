@@ -12,7 +12,8 @@ namespace Indimaret.Model
     {
         public clDataContext() : base("Name=IndimaretConn")
         {
-            Database.SetInitializer <clDataContext> (null);
+            Database.SetInitializer(new clInitializer());
+            //Database.SetInitializer <clDataContext> (null);
             //selesaikan initializer terlebih dahulu
         }
         public virtual DbSet<clBarang> Barang { get; set; }
