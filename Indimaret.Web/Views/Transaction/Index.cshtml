@@ -1,209 +1,235 @@
-﻿
+﻿@{
+    ViewBag.Title = "Index";
+}
 <br />
 <br />
 <br />
-<br />
-
-<div class="row">
-    <div class="col-md-6">
-        <div class="table-responsive">
-            <table class="table">
-                <tr>
-                    <td>
-                        <label for="idInpNoFaktur">Invoice Number</label>
-                    </td>
-                    <td>
-                        <input type="text" class="form-control" id="idInpNoFaktur" placeholder="Invoice Number">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="idInpTglPenjualan">Date Transaction</label>
-                    </td>
-                    <td>
-                        <input type="text" class="form-control" id="idInpTglPenjualan" placeholder="Date Transaction">
-                    </td>
-                </tr>
-                <tr>
-
-                    <td colspan="2">
-                        <input type="text" class="form-control" id="idInpPencarianBarang" placeholder="Find">
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div class="table-responsive">
-            <table class="table">
-                <thead>
+<h2>Transaction</h2>
+<form id="idFrmTransaction">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="table-responsive">
+                <table class="table">
                     <tr>
-                        <td>Name</td>
-                        <td>Price</td>
-                        <td>Action</td>
+                        <td>
+                            <label for="idInpNoFaktur">Invoice Number</label>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" id="idInpNoFaktur" placeholder="Invoice Number">
+                        </td>
                     </tr>
-                </thead>
-                <tbody id="idTblBodyBarang"></tbody>
-            </table>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="table-responsive">
-            <table class="table">
-                <thead>
                     <tr>
-                        <td>Name</td>
-                        <td>Quantity</td>
-                        <td>Subtotal</td>
-                        <td>Action</td>
-
+                        <td>
+                            <label for="idInpTglPenjualan">Date Transaction</label>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" id="idInpTglPenjualan" placeholder="Date Transaction">
+                        </td>
                     </tr>
-                </thead>
-                <tbody id="idTblBodyTransaction"></tbody>
-            </table>
+                    <tr>
+
+                        <td colspan="2">
+                            <input type="text" class="form-control" id="idInpPencarianBarang" placeholder="Find">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td>Name</td>
+                            <td>Price</td>
+                            <td>Action</td>
+                        </tr>
+                    </thead>
+                    <tbody id="idTblBodyBarang"></tbody>
+                </table>
+            </div>
         </div>
-        <br />
-        <br />
-        <br />
-        <div class="row">
-            <div class="col-md-6 col-md-offset-4">
-                <div class="table-responsive">
-                    <table class="table">
+        <div class="col-md-6">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
                         <tr>
-                            <td>
-                                <input type="text" class="form-control" id="idInpTotalHarga" placeholder="Total">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="text" class="form-control" id="idInpBayar" placeholder="Cash">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="text" class="form-control" id="idInpSisa" placeholder="Change">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="col-md-3 col-md-offset-8">
-                                    <button type="button" class="btn btn-success" id="idBtnSubmitTransaction">Submit</button>
+                            <td>Name</td>
+                            <td>Quantity</td>
+                            <td>Subtotal</td>
+                            <td>Action</td>
 
-                                </div>
-                            </td>
                         </tr>
+                    </thead>
+                    <tbody id="idTblBodyTransaction"></tbody>
+                </table>
+            </div>
+            <br />
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-md-6 col-md-offset-4">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tr>
+                                <td>
+                                    <input type="text" class="form-control" id="idInpTotalHarga" placeholder="Total">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="form-control" id="idInpBayar" placeholder="Cash">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" class="form-control" id="idInpSisa" placeholder="Change">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="col-md-3 col-md-offset-8">
+                                        <button type="button" class="btn btn-success" id="idBtnSubmitTransaction">Submit</button>
 
-                    </table>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+</form>
 
-    <script>
-        var vDataBarang = [
-              { 'ID': 1, 'TokoID': 1, 'KodeBarang': 'KB001', 'NamaBarang': 'Panadol', 'AsalPabrik': 'Bogor', 'harga': 3000, 'JmlBarang': 30, 'LamaKadaluarsa': 10 }
-            , { 'ID': 2, 'TokoID': 1, 'KodeBarang': 'KB002', 'NamaBarang': 'Dekolgen', 'AsalPabrik': 'Bandung', 'harga': 2500, 'JmlBarang': 5, 'LamaKadaluarsa': 40 }
-            , { 'ID': 3, 'TokoID': 1, 'KodeBarang': 'KB003', 'NamaBarang': 'Promag', 'AsalPabrik': 'Jakarta', 'harga': 2000, 'JmlBarang': 12, 'LamaKadaluarsa': 15 }
-            , { 'ID': 4, 'TokoID': 2, 'KodeBarang': 'KB004', 'NamaBarang': 'Vit_C', 'AsalPabrik': 'Yogya', 'harga': 500, 'JmlBarang': 23, 'LamaKadaluarsa': 20 }
-        ];
+<script>
+    var vDataBarang = [
+          { 'ID': 1, 'TokoID': 1, 'KodeBarang': 'KB001', 'NamaBarang': 'Panadol', 'AsalPabrik': 'Bogor', 'harga': 3000, 'JmlBarang': 30, 'LamaKadaluarsa': 10 }
+        , { 'ID': 2, 'TokoID': 1, 'KodeBarang': 'KB002', 'NamaBarang': 'Dekolgen', 'AsalPabrik': 'Bandung', 'harga': 2500, 'JmlBarang': 5, 'LamaKadaluarsa': 40 }
+        , { 'ID': 3, 'TokoID': 1, 'KodeBarang': 'KB003', 'NamaBarang': 'Promag', 'AsalPabrik': 'Jakarta', 'harga': 2000, 'JmlBarang': 12, 'LamaKadaluarsa': 15 }
+        , { 'ID': 4, 'TokoID': 2, 'KodeBarang': 'KB004', 'NamaBarang': 'Vit_C', 'AsalPabrik': 'Yogya', 'harga': 500, 'JmlBarang': 23, 'LamaKadaluarsa': 20 }
+    ];
 
-        $(document).ready(function () {
+    $(document).ready(function () {
 
-            var vStrHtml = '';
-            var vCtr = 0;
-            var vTkp = true;
-            var vJmlBarang = 1;
-            var vJml = 0;
-            var vHarga = 0
-            $("#idInpTglPenjualan").datepicker({
-                minDate: 0,maxDate:0,
-                dateFormat: "yy-mm-dd"
-            }).datepicker("setDate", new Date());
+        var vStrHtml = '';
+        var vCtr = 0;
+        var vTkp = true;
+        var vJmlBarang = 1;
+        var vJml = 0;
+        var vHarga = 0
+        $("#idInpTglPenjualan").datepicker({
+            minDate: 0, maxDate: 0,
+            dateFormat: "yy-mm-dd"
+        }).datepicker("setDate", new Date());
 
-            $('#idInpNoFaktur').mask('IDM-0000');
+        $('#idInpNoFaktur').mask('IDM-0000');
 
-            $.each(vDataBarang, function (i, d) {
-                vStrHtml = vStrHtml + '<tr>' +
-                        '<td>' + d.NamaBarang + '</td>' +
-                        '<td>' + d.harga + '</td>' +
-                        '<td><button type = "button" class="btn btn-primary clBtnTambahBrang" dataBarang=' + JSON.stringify(d) + ' > + </button></td>' +
+        $.each(vDataBarang, function (i, d) {
+            vStrHtml = vStrHtml + '<tr>' +
+                    '<td>' + d.NamaBarang + '</td>' +
+                    '<td>' + d.harga + '</td>' +
+                    '<td><button type = "button" class="btn btn-primary clBtnTambahBrang" dataBarang=' + JSON.stringify(d) + ' > + </button></td>' +
+                '</tr>';
+        });
+
+        $('#idTblBodyBarang').append(vStrHtml);
+
+        $('.clBtnTambahBrang').click(function () {
+
+
+            var vDataBarangDetail = JSON.parse($(this).attr('dataBarang'));
+            var vHargaBarang = vDataBarangDetail.harga;
+            var vStrHtmlTrasaksi = '';
+
+            $('.clNmBarang').each(function (i, d) {
+                debugger;
+
+                if (vDataBarangDetail.ID == parseInt($(this).attr('dataID'))) {
+                    vTkp = false;
+
+                    vJmlBarang = $(this).parent().parent().find('td input:text.clJmlBarang').val();
+                    vJmlBarang++;
+                    $(this).parent().parent().find('td input:text.clJmlBarang').val(vJmlBarang);
+                    vHargaBarang = vJmlBarang * vHargaBarang;
+                    $(this).parent().parent().find('td input:text.clHargaBarang').val(vHargaBarang);
+                    debugger;
+
+                }
+            });
+
+            if (vTkp == false) {
+                debugger;
+
+
+                vCtr = 1;
+                vTkp = true;
+            } else {
+                debugger;
+                vCtr = 0;
+            }
+            if (vCtr == 0) {
+                debugger;
+                vJmlBarang = 1;
+                vStrHtmlTrasaksi = vStrHtmlTrasaksi + '<tr>' +
+                    '<td><input type="text" class="clNmBarang" dataID="' + vDataBarangDetail.ID + '" value=" ' + vDataBarangDetail.NamaBarang + '" /></td>' +
+                    '<td><input type="text" class="clJmlBarang" value=" ' + vJmlBarang + '" /></td>' +
+                    '<td><input type="text" class="clHargaBarang" value=" ' + vHargaBarang + '" /></td>' +
+                    '<td><button type = "button" class="btn btn-danger clBtnDeleteBrang"  > - </button></td>' +
                     '</tr>';
+                $('#idTblBodyTransaction').append(vStrHtmlTrasaksi);
+            }
+
+
+            $('.clBtnDeleteBrang').click(function () { //menghapus row
+                var tangkap = $(this).parent().parent().find('td input:text.clHargaBarang').val();
+                $(this).parent().parent().remove();
+                $("#idInpTotalHarga").val(sum -= tangkap);
+                $("#idInpSisa").val($("#idInpBayar").val() - $("#idInpTotalHarga").val());
+                debugger;
             });
 
-            $('#idTblBodyBarang').append(vStrHtml);
-
-            $('.clBtnTambahBrang').click(function () {
-
-
-                var vDataBarangDetail = JSON.parse($(this).attr('dataBarang'));
-                var vHargaBarang = vDataBarangDetail.harga;
-                var vStrHtmlTrasaksi = '';
-
-                $('.clNmBarang').each(function (i, d) {
+            var sum = 0;
+            $('.clHargaBarang').each(function (i, d) { // menghitung total dari subtotal
+                if ($(this).val() !== "") {
                     debugger;
-
-                    if (vDataBarangDetail.ID == parseInt($(this).attr('dataID'))) {
-                        vTkp = false;
-
-                        vJmlBarang = $(this).parent().parent().find('td input:text.clJmlBarang').val();
-                        vJmlBarang++;
-                        $(this).parent().parent().find('td input:text.clJmlBarang').val(vJmlBarang);
-                        vHargaBarang = vJmlBarang * vHargaBarang;
-                        $(this).parent().parent().find('td input:text.clHargaBarang').val(vHargaBarang);
-                        debugger;
-
-                    }
-                });
-
-                if (vTkp == false) {
-                    debugger;
-
-
-                    vCtr = 1;
-                    vTkp = true;
-                } else {
-                    debugger;
-                    vCtr = 0;
-                }
-                if (vCtr == 0) {
-                    debugger;
-                    vJmlBarang = 1;
-                    vStrHtmlTrasaksi = vStrHtmlTrasaksi + '<tr>' +
-                        '<td><input type="text" class="clNmBarang" dataID="' + vDataBarangDetail.ID + '" value=" ' + vDataBarangDetail.NamaBarang + '" /></td>' +
-                        '<td><input type="text" class="clJmlBarang" value=" ' + vJmlBarang + '" /></td>' +
-                        '<td><input type="text" class="clHargaBarang" value=" ' + vHargaBarang + '" /></td>' +
-                        '<td><button type = "button" class="btn btn-danger clBtnDeleteBrang"  > - </button></td>' +
-                        '</tr>';
-                    $('#idTblBodyTransaction').append(vStrHtmlTrasaksi);
-                }
-
-
-                $('.clBtnDeleteBrang').click(function () { //menghapus row
-                    var tangkap= $(this).parent().parent().find('td input:text.clHargaBarang').val();
-                    $(this).parent().parent().remove();
-                    $("#idInpTotalHarga").val(sum -= tangkap);
+                    sum += parseInt($(this).val(), 10);
+                    $("#idInpTotalHarga").val(sum);
                     $("#idInpSisa").val($("#idInpBayar").val() - $("#idInpTotalHarga").val());
-                    debugger;
-                });
-
-                var sum = 0;
-                $('.clHargaBarang').each(function (i, d) { // menghitung total dari subtotal
-                    if ($(this).val() !== "") {
-                        debugger;
-                        sum += parseInt($(this).val(), 10);
-                        $("#idInpTotalHarga").val(sum);
-                        $("#idInpSisa").val($("#idInpBayar").val() - $("#idInpTotalHarga").val());
-                    }
-                });
-
-            });
-
-            $("#idInpBayar").keyup(function () {
-                bayar = parseInt($("#idInpBayar").val());
-                total = parseInt($("#idInpTotalHarga").val());
-                kembali = bayar-total;
-                if (bayar>=total) {
-                    $("#idInpSisa").val(kembali);}
-                else { $("#idInpSisa").val(0);}
+                }
             });
 
         });
-    </script>
+
+        $("#idInpBayar").keyup(function () {
+            bayar = parseInt($("#idInpBayar").val());
+            total = parseInt($("#idInpTotalHarga").val());
+            kembali = bayar - total;
+            if (bayar >= total) {
+                $("#idInpSisa").val(kembali);
+            }
+            else { $("#idInpSisa").val(0); }
+        });
+
+        //tombol untuk menyimpan data transaksi
+        $('#idBtnSubmitTransaction').click(function () {
+            debugger;
+
+            //get ajax untuk menyimpan data
+            var vDataTransaction = $('#idFrmTransaction').serialize();
+            debugger;
+
+            //ajax untuk menyimpan data
+            $.ajax({
+                url: '/Transaction/SaveTransaction',
+                data: vDataTransaction,
+                method: 'Post',
+                success: function (mdl) {
+                    debugger;
+                },
+                error: function (mdl) {
+                    debugger;
+                }
+            });
+        });
+
+    });
+</script>

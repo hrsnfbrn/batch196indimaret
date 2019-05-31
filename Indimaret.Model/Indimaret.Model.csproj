@@ -49,6 +49,8 @@
     <Compile Include="clBarang.cs" />
     <Compile Include="clDataContext.cs" />
     <Compile Include="clInitializer.cs" />
+    <Compile Include="DetailTransaction.cs" />
+    <Compile Include="MasterTransaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

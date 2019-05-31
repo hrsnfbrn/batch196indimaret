@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Indimaret.ViewModel
+namespace Indimaret.Repo
 {
-    public class Class1
+    class MasterTransaksi
     {
     }
 }

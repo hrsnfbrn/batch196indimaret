@@ -50,3 +50,5 @@ C:\Users\Public\MyClass\C#\batch196\day18\Indimaret\Indimaret.Web\bin\System.Web
 C:\Users\Public\MyClass\C#\batch196\day18\Indimaret\Indimaret.Web\obj\Debug\Indimaret.Web.csprojResolveAssemblyReference.cache
 C:\Users\Public\MyClass\C#\batch196\day18\Indimaret\Indimaret.Web\obj\Debug\Indimaret.Web.dll
 C:\Users\Public\MyClass\C#\batch196\day18\Indimaret\Indimaret.Web\obj\Debug\Indimaret.Web.pdb
+C:\Users\Public\MyClass\C#\batch196\day18\Indimaret\Indimaret.Web\bin\Indimaret.ViewModel.dll
+C:\Users\Public\MyClass\C#\batch196\day18\Indimaret\Indimaret.Web\bin\Indimaret.ViewModel.pdb

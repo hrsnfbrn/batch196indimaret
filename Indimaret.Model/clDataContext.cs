@@ -12,11 +12,14 @@ namespace Indimaret.Model
     {
         public clDataContext() : base("Name=IndimaretConn")
         {
-            Database.SetInitializer(new clInitializer());
-            //Database.SetInitializer <clDataContext> (null);
-            //selesaikan initializer terlebih dahulu
+            //Database.SetInitializer(new clInitializer());
+            Database.SetInitializer<clDataContext>(null);
         }
         public virtual DbSet<clBarang> Barang { get; set; }
+
+        public virtual DbSet<MasterTransaction> MasterTransaction { get; set; }
+
+        public virtual DbSet<DetailTransaction> DetailTransaction { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

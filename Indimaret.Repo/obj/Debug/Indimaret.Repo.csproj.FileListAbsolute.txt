@@ -22,3 +22,5 @@ C:\Users\Public\MyClass\C#\batch196\day18\Indimaret\Indimaret.Repo\bin\Debug\Ent
 C:\Users\Public\MyClass\C#\batch196\day18\Indimaret\Indimaret.Repo\obj\Debug\Indimaret.Repo.csprojResolveAssemblyReference.cache
 C:\Users\Public\MyClass\C#\batch196\day18\Indimaret\Indimaret.Repo\obj\Debug\Indimaret.Repo.dll
 C:\Users\Public\MyClass\C#\batch196\day18\Indimaret\Indimaret.Repo\obj\Debug\Indimaret.Repo.pdb
+C:\Users\Public\MyClass\C#\batch196\day18\Indimaret\Indimaret.Repo\bin\Debug\Indimaret.ViewModel.dll
+C:\Users\Public\MyClass\C#\batch196\day18\Indimaret\Indimaret.Repo\bin\Debug\Indimaret.ViewModel.pdb

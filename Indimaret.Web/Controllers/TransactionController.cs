@@ -1,4 +1,5 @@
 ﻿using Indimaret.Repo;
+using Indimaret.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,5 +26,22 @@ namespace Indimaret.Web.Controllers
         {
             return Json(clBarangRepo.GetAll(), JsonRequestBehavior.AllowGet);
         }
+
+        [HttpPost]
+        public ActionResult SaveTransaction(TransactionViewModel mdl)
+        {
+            if (TransactionRepo.SimpanTransaksi(mdl))
+            {
+                return Json(new { hasil = "berhasil" }, JsonRequestBehavior.AllowGet);
+            }
+
+            else
+            {
+                return Json(new { hasil = "gagal" }, JsonRequestBehavior.AllowGet);
+            }
+
+        }
+
+
 	}
 }

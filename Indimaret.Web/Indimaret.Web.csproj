@@ -185,6 +185,10 @@
       <Project>{7cc32495-c407-42c5-b34b-b1785eef5799}</Project>
       <Name>Indimaret.Repo</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Indimaret.ViewModel\Indimaret.ViewModel.csproj">
+      <Project>{72407fbc-10f7-4eec-ab38-8f0e3ea3b40a}</Project>
+      <Name>Indimaret.ViewModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
